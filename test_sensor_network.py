@@ -14,7 +14,7 @@ print('Dataset generated.\nCorrupting the dataset...')
 
 # Corrupt the dataset whereby a random entries in the sensor network will have an 'err' string value
 # The 'err' value indicates a broken sensor
-randomList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+randomList = [n for n in range(0, 16)]
 
 a = random.choice(randomList)
 b = random.choice(randomList)
