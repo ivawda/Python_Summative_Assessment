@@ -55,6 +55,9 @@ def test_sensor_network(sensor_network_dataset):
                 # User message
                 print('Error detected!\nWriting error message to log file...')
 
+                # Change the error string to a identifiable numeric value i.e. error = -1
+                sensor_network_dataset[x][y] = -1
+
                 # Write an error message in the log file
                 with open('error.log', 'a') as logfile:
                     logfile.write('{0}\t\tError at Cluster{1}_Sensor{2}'.format(current_timestamp, x+1, y+1))
